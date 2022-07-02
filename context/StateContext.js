@@ -27,7 +27,7 @@ export const StateContext = ({ children }) => {
                     quantity: cartProduct.quantity + quantity
                 }
             })
-            setCartItems(updatedCartItems);   
+            setCartItems(updatedCartItems);
         } else {
             product.quantity = quantity;
             setCartItems([...cartItems, { ...product}])
@@ -88,7 +88,10 @@ export const StateContext = ({ children }) => {
                 onAdd,
                 setShowCart,
                 toggleCartItemQuantity,
-                onRemove
+                onRemove,
+                setCartItems,
+                setTotalPrice,
+                setTotalQuantities
             }}>
             {children}
         </Context.Provider>
